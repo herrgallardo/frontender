@@ -127,7 +127,7 @@ const Header = () => {
           className="flex items-center cursor-pointer z-50"
         >
           <motion.img
-            src="/logo/logo.png"
+            src="/logos/logo.png"
             alt="Logo"
             whileHover={{ y: -2 }}
             className={cn(
