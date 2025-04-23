@@ -405,3 +405,6 @@ export const typewriterWords: string[] = [
   "versatile.",
   "well-organized.",
 ]
+
+export const heroText =
+  "Hi there! I'm Antonio Gallardo Girela, a Full Stack Developer with a passion for problem-solving. Based in Lund, Sweden, I bring fresh perspective, tenacious determination, and creative solutions to complex challenges. I specialize in building modern, responsive web applications using JavaScript, TypeScript, React, and Next.js. With professional experience at Axis Communications developing with React and GraphQL, I combine technical expertise with a unique linguistic background, including a Bachelor's degree in Spanish and fluency in four languages. Whether you need a polished website, a dynamic web application, or technical consultation, I'm ready to bring your ideas to life with precision and creativity. Let's build something amazing together!"
