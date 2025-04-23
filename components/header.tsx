@@ -49,7 +49,7 @@ const Header = () => {
       boxShadow: "0 4px 12px rgba(0, 0, 0, 0.8)",
     },
     scrolled: {
-      backgroundColor: "rgba(255, 255, 255, 0.10)",
+      backgroundColor: "rgba(255, 255, 255, 0.20)",
 
       height: "5.5rem",
       boxShadow: "0 1px 4px rgba(0, 0, 0, 0.2)",
