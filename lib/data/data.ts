@@ -408,3 +408,33 @@ export const typewriterWords: string[] = [
 
 export const heroText =
   "Hi there! I'm Antonio Gallardo Girela, a Full Stack Developer with a passion for problem-solving. Based in Lund, Sweden, I bring fresh perspective, tenacious determination, and creative solutions to complex challenges. I specialize in building modern, responsive web applications using JavaScript, TypeScript, React, and Next.js. With professional experience at Axis Communications developing with React and GraphQL, I combine technical expertise with a unique linguistic background, including a Bachelor's degree in Spanish and fluency in four languages. Whether you need a polished website, a dynamic web application, or technical consultation, I'm ready to bring your ideas to life with precision and creativity. Let's build something amazing together!"
+
+export const synonymMap: Record<string, string> = {
+  passion: "enthusiasm",
+  "problem-solving": "troubleshooting",
+  fresh: "new",
+  perspective: "viewpoint",
+  tenacious: "persistent",
+  determination: "resolve",
+  creative: "innovative",
+  solutions: "answers",
+  complex: "complicated",
+  challenges: "problems",
+  specialize: "focus on",
+  building: "creating",
+  modern: "contemporary",
+  responsive: "adaptive",
+  applications: "apps",
+  technical: "technological",
+  expertise: "proficiency",
+  unique: "distinctive",
+  linguistic: "language",
+  background: "foundation",
+  fluency: "mastery",
+  precision: "accuracy",
+  creativity: "imagination",
+  amazing: "wonderful",
+  "Full Stack Developer": "Web Developer",
+  polished: "refined",
+  dynamic: "interactive",
+}
