@@ -59,3 +59,30 @@ export interface SkillItem {
   name: string
   icon: string
 }
+
+export interface HomePageContent {
+  hero: {
+    description: string
+  }
+  buttons: {
+    viewProjects: string
+    contactMe: string
+    getInTouch: string
+    learnMore: string
+  }
+  sections: {
+    featuredProjects: {
+      title: string
+      projects: ProjectItem[]
+    }
+    contact: {
+      title: string
+      description: string
+    }
+  }
+}
+
+export interface ProjectItem {
+  title: string
+  description: string
+}

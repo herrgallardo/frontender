@@ -185,7 +185,7 @@ const AITypewriter: React.FC<AITypewriterProps> = ({
   ])
 
   return (
-    <div className="font-sans text-white">
+    <div className="font-sans text-white text-shadow-sm text-shadow-black/90 text-sm md:text-lg">
       <div className="relative">
         {/* Display the current text */}
         <span>{displayedText}</span>
@@ -206,8 +206,8 @@ const Typewriter: React.FC = () => {
   const resetKey = usePathname() || ""
 
   return (
-    <div className="p-4 max-w-2xl mx-auto rounded-lg bg-midnight-blue/95 my-12">
-      <div className="p-4 rounded-lg mb-6 min-h-32">
+    <div className="w-full rounded-lg bg-teal-blue/20 shadow-black/50 shadow-xs hover:scale-105 transition-all duration-300 hover:shadow-lg">
+      <div className="p-4 sm:p-12 rounded-lg min-h-20 sm:min-h-28 max-w-full">
         <AITypewriter
           key={resetKey} // Force remount on route change
           resetKey={resetKey} // Trigger effect reset

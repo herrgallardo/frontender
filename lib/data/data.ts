@@ -4,6 +4,7 @@ import {
   EducationItem,
   ExperienceItem,
   FooterSections,
+  HomePageContent,
   LanguageItem,
   Link,
   SkillItem,
@@ -312,52 +313,12 @@ export const languages: LanguageItem[] = [
 
 export const skills: SkillItem[] = [
   {
-    name: "HTML",
-    icon: "/icons/html-icon.png",
-  },
-  {
     name: "CSS",
     icon: "/icons/css-icon.png",
   },
   {
-    name: "JavaScript",
-    icon: "/icons/javascript-icon.png",
-  },
-  {
-    name: "TypeScript",
-    icon: "/icons/typescript-icon.png",
-  },
-  {
-    name: "React",
-    icon: "/icons/react-icon.png",
-  },
-  {
-    name: "Next.js",
-    icon: "/icons/nextjs-icon.png",
-  },
-  {
-    name: "Node.js",
-    icon: "/icons/nodejs-icon.png",
-  },
-  {
-    name: "Git",
-    icon: "/icons/git-icon.png",
-  },
-  {
-    name: "Jira",
-    icon: "/icons/jira-icon.png",
-  },
-  {
-    name: "TailwindCSS",
-    icon: "/icons/tailwindcss-icon.png",
-  },
-  {
-    name: "MongoDB",
-    icon: "/icons/mongodb-icon.png",
-  },
-  {
-    name: "GraphQL",
-    icon: "/icons/graphql-icon.png",
+    name: "Elementor Pro",
+    icon: "/icons/elementor-pro-icon.png",
   },
   {
     name: "Express",
@@ -368,8 +329,48 @@ export const skills: SkillItem[] = [
     icon: "/icons/framer-motion-icon.png",
   },
   {
-    name: "Elementor Pro",
-    icon: "/icons/elementor-pro-icon.png",
+    name: "Git",
+    icon: "/icons/git-icon.png",
+  },
+  {
+    name: "GraphQL",
+    icon: "/icons/graphql-icon.png",
+  },
+  {
+    name: "HTML",
+    icon: "/icons/html-icon.png",
+  },
+  {
+    name: "JavaScript",
+    icon: "/icons/javascript-icon.png",
+  },
+  {
+    name: "Jira",
+    icon: "/icons/jira-icon.png",
+  },
+  {
+    name: "MongoDB",
+    icon: "/icons/mongodb-icon.png",
+  },
+  {
+    name: "Next.js",
+    icon: "/icons/nextjs-icon.png",
+  },
+  {
+    name: "Node.js",
+    icon: "/icons/nodejs-icon.png",
+  },
+  {
+    name: "React",
+    icon: "/icons/react-icon.png",
+  },
+  {
+    name: "TailwindCSS",
+    icon: "/icons/tailwindcss-icon.png",
+  },
+  {
+    name: "TypeScript",
+    icon: "/icons/typescript-icon.png",
   },
 ]
 
@@ -437,4 +438,41 @@ export const synonymMap: Record<string, string> = {
   "Full Stack Developer": "Web Developer",
   polished: "refined",
   dynamic: "interactive",
+}
+
+export const homePageContent: HomePageContent = {
+  hero: {
+    description:
+      "I'm a developer crafting beautiful and performant web experiences. Explore my work and let's build something great together.",
+  },
+  buttons: {
+    viewProjects: "View Projects",
+    contactMe: "Contact Me",
+    getInTouch: "Get in Touch",
+    learnMore: "Learn More",
+  },
+  sections: {
+    featuredProjects: {
+      title: "Featured Projects",
+      projects: [
+        {
+          title: "Project 1",
+          description: "Brief description of project 1.",
+        },
+        {
+          title: "Project 2",
+          description: "Brief description of project 2.",
+        },
+        {
+          title: "Project 3",
+          description: "Brief description of project 3.",
+        },
+      ],
+    },
+    contact: {
+      title: "Let's Work Together",
+      description:
+        "Interested in hiring a skilled developer? I'm currently looking for new opportunities and would love to hear from you. Feel free to reach out and let's discuss how my skills can benefit your team.",
+    },
+  },
 }

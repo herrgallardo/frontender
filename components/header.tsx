@@ -49,7 +49,7 @@ const Header = () => {
       boxShadow: "0 4px 12px rgba(0, 0, 0, 0.8)",
     },
     scrolled: {
-      backgroundColor: "rgba(255, 255, 255, 0.20)",
+      backgroundColor: "rgba(33, 58, 88, 0.85)",
 
       height: "5.5rem",
       boxShadow: "0 1px 4px rgba(0, 0, 0, 0.2)",
@@ -156,8 +156,7 @@ const Header = () => {
                       className={cn(
                         navigationMenuTriggerStyle(),
                         "bg-transparent lg:text-lg font-semibold text-shadow-md text-shadow-black/20 text-bright-cyan",
-                        "hover:text-white hover:bg-transparent",
-                        isScrolled && "text-midnight-blue"
+                        "hover:text-white hover:bg-transparent"
                       )}
                     >
                       <motion.span
@@ -204,7 +203,7 @@ const Header = () => {
           <div className="flex justify-between items-center mb-8">
             <Link href="/">
               <motion.img
-                src="/logo/logo.png"
+                src="/logos/logo.png"
                 alt="Logo"
                 className="h-14"
                 whileHover={{ y: -2 }}

@@ -33,7 +33,7 @@ export default function RootLayout({
         <Header />
         <main className="pt-20 bg-deep-teal">
           {children}
-          <div className="h-[2000px]" />
+          <div />
         </main>
         <Footer />
       </body>
