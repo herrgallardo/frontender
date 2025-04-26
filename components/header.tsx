@@ -50,7 +50,6 @@ const Header = () => {
     },
     scrolled: {
       backgroundColor: "rgba(33, 58, 88, 0.85)",
-
       height: "5.5rem",
       boxShadow: "0 1px 4px rgba(0, 0, 0, 0.2)",
     },
@@ -182,13 +181,9 @@ const Header = () => {
         <motion.button
           whileTap={{ scale: 0.9 }}
           onClick={() => setIsOpen(!isOpen)}
-          className="p-2 text-deep-teal"
+          className="p-2 text-bright-cyan"
         >
-          {isOpen ? (
-            <X size={24} className="text-deep-teal" />
-          ) : (
-            <MenuIcon size={24} className="text-deep-teal" />
-          )}
+          {isOpen ? <X size={24} /> : <MenuIcon size={24} />}
         </motion.button>
       </div>
 
@@ -209,12 +204,6 @@ const Header = () => {
                 whileHover={{ y: -2 }}
               />
             </Link>
-            <motion.button
-              whileTap={{ scale: 0.9 }}
-              onClick={() => setIsOpen(false)}
-            >
-              <X size={24} className="text-bright-cyan" />
-            </motion.button>
           </div>
           <nav>
             <ul className="space-y-4">
