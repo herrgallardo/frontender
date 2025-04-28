@@ -60,6 +60,18 @@ export interface SkillItem {
   icon: string
 }
 
+export interface ProjectItem {
+  title: string
+  briefDescription: string
+  description: string
+  image: string
+  techStack: string[]
+  links: {
+    demo: string
+    github: string
+  }
+}
+
 export interface HomePageContent {
   hero: {
     description: string
@@ -73,6 +85,7 @@ export interface HomePageContent {
   sections: {
     featuredProjects: {
       title: string
+      description: string
       projects: ProjectItem[]
     }
     contact: {
@@ -83,12 +96,6 @@ export interface HomePageContent {
       title: string
     }
   }
-}
-
-export interface ProjectItem {
-  title: string
-  briefDescription: string
-  description: string
 }
 
 export interface AboutPageContent {

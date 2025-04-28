@@ -472,6 +472,8 @@ export const homePageContent: HomePageContent = {
   sections: {
     featuredProjects: {
       title: "Featured Projects",
+      description:
+        "Explore my portfolio of web applications and digital solutions. Each project showcases different skills and technologies in my development journey.",
       projects: [
         {
           title: "My CV",
@@ -479,6 +481,18 @@ export const homePageContent: HomePageContent = {
             "Professional CV website with responsive design and interactive elements.",
           description:
             "A responsive personal CV website built with Next.js and Tailwind CSS. Features a clean, professional design with a two-column layout, interactive elements, and a mobile-first approach. Showcases my professional background, skills, and experience through visually appealing components like skill grids and interactive timelines.",
+          image: "/images/projects/cv-project.png",
+          techStack: [
+            "React",
+            "Next.js",
+            "TypeScript",
+            "Tailwind CSS",
+            "Framer Motion",
+          ],
+          links: {
+            demo: "https://frontender.se",
+            github: "https://github.com/herrgallardo/my-personal-website",
+          },
         },
         {
           title: "I Knead Cake",
@@ -486,6 +500,18 @@ export const homePageContent: HomePageContent = {
             "Responsive bakery website showcasing artisanal cupcakes and wedding cakes with AI-generated visuals.",
           description:
             "A responsive bakery website built with Next.js 15 and Tailwind CSS. Features a clean, modern design with a soft color palette that highlights the bakery's products while providing essential business information. All images and icons were AI-generated, creating a cohesive visual identity. Implements UI components with shadcn/ui, image carousels, responsive navigation, and contact form functionality with modern frontend architecture.",
+          image: "/images/projects/bakery-project.png",
+          techStack: [
+            "Next.js 15",
+            "Tailwind CSS",
+            "shadcn/ui",
+            "TypeScript",
+            "Responsive Design",
+          ],
+          links: {
+            demo: "https://lxcn-frontend-02-cakery.vercel.app/",
+            github: "https://github.com/herrgallardo/lxcn-frontend-02-cakery",
+          },
         },
         {
           title: "Portfolio",
@@ -493,6 +519,21 @@ export const homePageContent: HomePageContent = {
             "Personal portfolio website showcasing my front-end development skills with React, TypeScript, and modern web technologies.",
           description:
             "A responsive personal portfolio website built with React, Next.js, TypeScript, and Tailwind CSS. Features a clean, intuitive interface with smooth Framer Motion animations, dark/light mode toggle, and fully responsive design. Includes interactive sections for showcasing my experience, skills, education, and languages, along with a contact form powered by React Email and Resend. Deployed on Vercel for optimal performance and reliability.",
+          image: "/images/projects/portfolio-project.png",
+          techStack: [
+            "React",
+            "TypeScript",
+            "Next.js",
+            "Tailwind CSS",
+            "Framer Motion",
+            "React Email",
+            "Resend",
+            "Vercel",
+          ],
+          links: {
+            demo: "https://antonio-portfolio.vercel.app",
+            github: "https://github.com/herrgallardo/frontender",
+          },
         },
       ],
     },
