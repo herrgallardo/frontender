@@ -1,6 +1,6 @@
 "use client"
 
-import React from "react"
+import React, { useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import {
@@ -12,6 +12,48 @@ import {
 } from "@/lib/data/data"
 
 const About = () => {
+  // State to track whether to show all items or just recent ones
+  const [showAllExperience, setShowAllExperience] = useState(false)
+  const [showAllEducation, setShowAllEducation] = useState(false)
+
+  // Refs for scrolling to sections
+  const experienceSectionRef = React.useRef<HTMLDivElement>(null)
+  const educationSectionRef = React.useRef<HTMLDivElement>(null)
+
+  // Function to handle toggling experience section
+  const toggleExperienceSection = (showAll: boolean) => {
+    setShowAllExperience(showAll)
+    // If toggling back to show fewer items, scroll to section title
+    if (!showAll) {
+      setTimeout(() => {
+        if (experienceSectionRef.current) {
+          // Smooth scroll with offset to position the title properly in viewport
+          window.scrollTo({
+            top: experienceSectionRef.current.offsetTop - 100,
+            behavior: "smooth",
+          })
+        }
+      }, 250) // Longer timeout for smoother transition
+    }
+  }
+
+  // Function to handle toggling education section
+  const toggleEducationSection = (showAll: boolean) => {
+    setShowAllEducation(showAll)
+    // If toggling back to show fewer items, scroll to section title
+    if (!showAll) {
+      setTimeout(() => {
+        if (educationSectionRef.current) {
+          // Smooth scroll with offset to position the title properly in viewport
+          window.scrollTo({
+            top: educationSectionRef.current.offsetTop - 100,
+            behavior: "smooth",
+          })
+        }
+      }, 250) // Longer timeout for smoother transition
+    }
+  }
+
   const staggerContainer = {
     initial: {},
     animate: {
@@ -27,7 +69,8 @@ const About = () => {
       opacity: 1,
       x: 0,
       transition: {
-        delay: 0.2 * i,
+        // Limit the maximum delay to avoid very long waits for items far down the list
+        delay: Math.min(0.2 * i, 1.0),
         duration: 0.5,
         ease: "easeOut",
       },
@@ -40,7 +83,8 @@ const About = () => {
       opacity: 1,
       x: 0,
       transition: {
-        delay: 0.2 * i,
+        // Limit the maximum delay to avoid very long waits for items far down the list
+        delay: Math.min(0.2 * i, 1.0),
         duration: 0.5,
         ease: "easeOut",
       },
@@ -82,6 +126,22 @@ const About = () => {
         duration: 0.6,
         ease: "easeOut",
       },
+    },
+  }
+
+  const buttonVariants = {
+    initial: { opacity: 0, y: 20 },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.8,
+        duration: 0.4,
+      },
+    },
+    hover: {
+      scale: 1.05,
+      boxShadow: "0 5px 15px rgba(0, 0, 0, 0.15)",
     },
   }
 
@@ -152,6 +212,7 @@ const About = () => {
             {/* Experience */}
             <div>
               <motion.h2
+                ref={experienceSectionRef}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -161,17 +222,25 @@ const About = () => {
                 {aboutPageContent.sections.experience.title}
               </motion.h2>
               <motion.div
+                key={showAllExperience ? "expanded" : "collapsed"}
                 variants={staggerContainer}
                 initial="initial"
-                whileInView="animate"
-                viewport={{ once: true }}
+                animate="animate"
                 className="relative ml-24 md:ml-34 lg:ml-34"
               >
                 <div className="space-y-6">
                   {experience
-                    .slice(0, aboutPageContent.sections.experience.showRecent)
+                    .slice(
+                      0,
+                      showAllExperience
+                        ? experience.length
+                        : aboutPageContent.sections.experience.showRecent
+                    )
                     .map((item, index, array) => {
-                      const isLastItem = index === array.length - 1
+                      const isLastItem = showAllExperience
+                        ? index === array.length - 1
+                        : index ===
+                          aboutPageContent.sections.experience.showRecent - 1
 
                       return (
                         <motion.div
@@ -245,14 +314,38 @@ const About = () => {
                 </div>
                 <motion.div
                   initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
+                  animate={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 1 }}
-                  className="text-center mt-6"
+                  className="text-center mt-8"
                 >
-                  <p className="text-aqua-green italic text-shadow-xs text-shadow-black/40">
-                    {aboutPageContent.sections.experience.recentText}
-                  </p>
+                  {!showAllExperience ? (
+                    <div>
+                      <p className="text-aqua-green italic mb-4 text-shadow-xs text-shadow-black/40">
+                        {aboutPageContent.sections.experience.recentText}
+                      </p>
+                      <motion.button
+                        variants={buttonVariants}
+                        initial="initial"
+                        animate="animate"
+                        whileHover="hover"
+                        onClick={() => toggleExperienceSection(true)}
+                        className="px-6 py-3 bg-bright-cyan text-midnight-blue font-semibold rounded-lg shadow-sm shadow-black transition-all duration-300"
+                      >
+                        {aboutPageContent.sections.experience.showAllButtonText}
+                      </motion.button>
+                    </div>
+                  ) : (
+                    <motion.button
+                      variants={buttonVariants}
+                      initial="initial"
+                      animate="animate"
+                      whileHover="hover"
+                      onClick={() => toggleExperienceSection(false)}
+                      className="px-6 py-3 bg-transparent border-2 border-bright-cyan text-bright-cyan font-semibold rounded-lg shadow-sm shadow-black transition-all duration-300 hover:bg-bright-cyan/10"
+                    >
+                      Show Recent Only
+                    </motion.button>
+                  )}
                 </motion.div>
               </motion.div>
             </div>
@@ -260,6 +353,7 @@ const About = () => {
             {/* Education */}
             <div>
               <motion.h2
+                ref={educationSectionRef}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -269,17 +363,25 @@ const About = () => {
                 {aboutPageContent.sections.education.title}
               </motion.h2>
               <motion.div
+                key={showAllEducation ? "expanded" : "collapsed"}
                 variants={staggerContainer}
                 initial="initial"
-                whileInView="animate"
-                viewport={{ once: true }}
+                animate="animate"
                 className="relative ml-24 md:ml-34 lg:ml-34"
               >
                 <div className="space-y-6">
                   {education
-                    .slice(0, aboutPageContent.sections.education.showRecent)
+                    .slice(
+                      0,
+                      showAllEducation
+                        ? education.length
+                        : aboutPageContent.sections.education.showRecent
+                    )
                     .map((item, index, array) => {
-                      const isLastItem = index === array.length - 1
+                      const isLastItem = showAllEducation
+                        ? index === array.length - 1
+                        : index ===
+                          aboutPageContent.sections.education.showRecent - 1
 
                       return (
                         <motion.div
@@ -353,14 +455,38 @@ const About = () => {
                 </div>
                 <motion.div
                   initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
+                  animate={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 1 }}
-                  className="text-center mt-6"
+                  className="text-center mt-8"
                 >
-                  <p className="text-aqua-green italic text-shadow-xs text-shadow-black/40">
-                    {aboutPageContent.sections.education.recentText}
-                  </p>
+                  {!showAllEducation ? (
+                    <div>
+                      <p className="text-aqua-green italic mb-4 text-shadow-xs text-shadow-black/40">
+                        {aboutPageContent.sections.education.recentText}
+                      </p>
+                      <motion.button
+                        variants={buttonVariants}
+                        initial="initial"
+                        animate="animate"
+                        whileHover="hover"
+                        onClick={() => toggleEducationSection(true)}
+                        className="px-6 py-3 bg-bright-cyan text-midnight-blue font-semibold rounded-lg shadow-sm shadow-black transition-all duration-300"
+                      >
+                        {aboutPageContent.sections.education.showAllButtonText}
+                      </motion.button>
+                    </div>
+                  ) : (
+                    <motion.button
+                      variants={buttonVariants}
+                      initial="initial"
+                      animate="animate"
+                      whileHover="hover"
+                      onClick={() => toggleEducationSection(false)}
+                      className="px-6 py-3 bg-transparent border-2 border-bright-cyan text-bright-cyan font-semibold rounded-lg shadow-sm shadow-black transition-all duration-300 hover:bg-bright-cyan/10"
+                    >
+                      {aboutPageContent.sections.education.showRecentButtonText}
+                    </motion.button>
+                  )}
                 </motion.div>
               </motion.div>
             </div>

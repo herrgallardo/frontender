@@ -117,11 +117,15 @@ export interface AboutPageContent {
       title: string
       showRecent: number
       recentText: string
+      showAllButtonText: string
+      showRecentButtonText: string
     }
     education: {
       title: string
       showRecent: number
       recentText: string
+      showAllButtonText: string
+      showRecentButtonText: string
     }
     running: {
       title: string

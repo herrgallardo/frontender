@@ -573,11 +573,15 @@ export const aboutPageContent: AboutPageContent = {
       title: "Experience",
       showRecent: 5,
       recentText: "Showing 5 most recent positions.",
+      showAllButtonText: "Show All Experience",
+      showRecentButtonText: "Show Recent Only",
     },
     education: {
       title: "Education",
       showRecent: 5,
       recentText: "Showing 5 most recent educational achievements.",
+      showAllButtonText: "Show All Education",
+      showRecentButtonText: "Show Recent Only",
     },
     running: {
       title: "My Running Journey",
@@ -591,7 +595,6 @@ export const aboutPageContent: AboutPageContent = {
         "Malmö Half Marathon (2013)",
         "Sydkustloppet, Trelleborgs Half Marathon (2012)",
         "Skryllemilen (10 Km.) (2012)",
-
         "Lundaloppet (10 Km.) (2015)",
         "Lundaloppet (15 Km.) (2025)",
       ],
