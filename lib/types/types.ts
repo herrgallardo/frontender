@@ -75,17 +75,54 @@ export interface HomePageContent {
       title: string
       projects: ProjectItem[]
     }
-    skills: {
-      title: string
-    }
     contact: {
       title: string
       description: string
+    }
+    skills: {
+      title: string
     }
   }
 }
 
 export interface ProjectItem {
   title: string
+  briefDescription: string
   description: string
+}
+
+export interface AboutPageContent {
+  hero: {
+    title: string
+    description: string[]
+    profileImage: string
+    profileImageAlt: string
+  }
+  sections: {
+    languages: {
+      title: string
+      maxLevel: number
+    }
+    skills: {
+      title: string
+    }
+    experience: {
+      title: string
+      showRecent: number
+      recentText: string
+    }
+    education: {
+      title: string
+      showRecent: number
+      recentText: string
+    }
+    running: {
+      title: string
+      description: string
+      image: string
+      imageAlt: string
+      racesTitle: string
+      races: string[]
+    }
+  }
 }

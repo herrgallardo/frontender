@@ -1,4 +1,5 @@
 import {
+  AboutPageContent,
   CompanyInfo,
   ContactInfo,
   EducationItem,
@@ -309,6 +310,11 @@ export const languages: LanguageItem[] = [
     level: "3",
     icon: "/icons/italian-icon.png",
   },
+  {
+    name: "Japanese",
+    level: "1",
+    icon: "/icons/japanese-icon.png",
+  },
 ]
 
 export const skills: SkillItem[] = [
@@ -468,16 +474,25 @@ export const homePageContent: HomePageContent = {
       title: "Featured Projects",
       projects: [
         {
-          title: "Project 1",
-          description: "Brief description of project 1.",
+          title: "My CV",
+          briefDescription:
+            "Professional CV website with responsive design and interactive elements.",
+          description:
+            "A responsive personal CV website built with Next.js and Tailwind CSS. Features a clean, professional design with a two-column layout, interactive elements, and a mobile-first approach. Showcases my professional background, skills, and experience through visually appealing components like skill grids and interactive timelines.",
         },
         {
-          title: "Project 2",
-          description: "Brief description of project 2.",
+          title: "I Knead Cake",
+          briefDescription:
+            "Responsive bakery website showcasing artisanal cupcakes and wedding cakes with AI-generated visuals.",
+          description:
+            "A responsive bakery website built with Next.js 15 and Tailwind CSS. Features a clean, modern design with a soft color palette that highlights the bakery's products while providing essential business information. All images and icons were AI-generated, creating a cohesive visual identity. Implements UI components with shadcn/ui, image carousels, responsive navigation, and contact form functionality with modern frontend architecture.",
         },
         {
-          title: "Project 3",
-          description: "Brief description of project 3.",
+          title: "Portfolio",
+          briefDescription:
+            "Personal portfolio website showcasing my front-end development skills with React, TypeScript, and modern web technologies.",
+          description:
+            "A responsive personal portfolio website built with React, Next.js, TypeScript, and Tailwind CSS. Features a clean, intuitive interface with smooth Framer Motion animations, dark/light mode toggle, and fully responsive design. Includes interactive sections for showcasing my experience, skills, education, and languages, along with a contact form powered by React Email and Resend. Deployed on Vercel for optimal performance and reliability.",
         },
       ],
     },
@@ -488,6 +503,56 @@ export const homePageContent: HomePageContent = {
       title: "Let's Work Together",
       description:
         "Interested in hiring a skilled developer? I'm currently looking for new opportunities and would love to hear from you. Feel free to reach out and let's discuss how my skills can benefit your team.",
+    },
+  },
+}
+
+export const aboutPageContent: AboutPageContent = {
+  hero: {
+    title: "About Me",
+    description: [
+      "I'm Antonio Gallardo Girela, a Full Stack Developer passionate about building intuitive and impactful web applications.",
+      "With experience in React, TypeScript, Next.js, and C#, I blend technical expertise with creative problem-solving. My background in linguistics and fluency in multiple languages gives me a unique perspective on communication and user experience.",
+      "Based in Lund, Sweden, I'm dedicated to creating seamless digital experiences through clean code and thoughtful design. Whether working on frontend interfaces or backend systems, I focus on delivering solutions that are both efficient and user-friendly.",
+      "When I'm not coding, I enjoy exploring languages, both human and programming ones, and finding creative ways to solve complex problems.",
+    ],
+    profileImage: "/images/profile-image.png",
+    profileImageAlt: "Antonio Gallardo Girela",
+  },
+  sections: {
+    languages: {
+      title: "Languages",
+      maxLevel: 5,
+    },
+    skills: {
+      title: "Skills",
+    },
+    experience: {
+      title: "Experience",
+      showRecent: 5,
+      recentText: "Showing 5 most recent positions.",
+    },
+    education: {
+      title: "Education",
+      showRecent: 5,
+      recentText: "Showing 5 most recent educational achievements.",
+    },
+    running: {
+      title: "My Running Journey",
+      description:
+        "I love to run. I used to run a lot, then took a break, but I'm happy to say I've started again. Running has been an important part of my life and has taught me discipline, perseverance, and the joy of pushing beyond perceived limits.",
+      image: "/images/marathon.jpg",
+      imageAlt: "Antonio Gallardo Girela",
+      racesTitle: "Official Races I've Completed:",
+      races: [
+        "Asics Stockholm Marathon (2012)",
+        "Malmö Half Marathon (2013)",
+        "Sydkustloppet, Trelleborgs Half Marathon (2012)",
+        "Skryllemilen (10 Km.) (2012)",
+
+        "Lundaloppet (10 Km.) (2015)",
+        "Lundaloppet (15 Km.) (2025)",
+      ],
     },
   },
 }

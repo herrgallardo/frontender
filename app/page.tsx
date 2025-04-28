@@ -88,7 +88,9 @@ export default function Home() {
                   <h3 className="text-xl font-semibold mb-2">
                     {project.title}
                   </h3>
-                  <p className="text-gray-300 mb-4">{project.description}</p>
+                  <p className="text-gray-300 mb-4">
+                    {project.briefDescription}
+                  </p>
                   <Link
                     href={`/projects`}
                     className="underline text-bright-cyan hover:text-light-mint-green"
