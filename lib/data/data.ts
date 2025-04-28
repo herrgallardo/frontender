@@ -531,7 +531,7 @@ export const homePageContent: HomePageContent = {
             "Vercel",
           ],
           links: {
-            demo: "https://antonio-portfolio.vercel.app",
+            demo: "https://frontender.se",
             github: "https://github.com/herrgallardo/frontender",
           },
         },
