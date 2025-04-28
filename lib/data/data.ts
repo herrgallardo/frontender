@@ -491,7 +491,7 @@ export const homePageContent: HomePageContent = {
             "Framer Motion",
           ],
           links: {
-            demo: "https://frontender.se",
+            demo: "https://lxcn-frontend-01-my-cv.vercel.app/",
             github: "https://github.com/herrgallardo/my-personal-website",
           },
         },
