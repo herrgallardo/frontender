@@ -313,6 +313,10 @@ export const languages: LanguageItem[] = [
 
 export const skills: SkillItem[] = [
   {
+    name: "C#",
+    icon: "/icons/c-sharp-icon.png",
+  },
+  {
     name: "CSS",
     icon: "/icons/css-icon.png",
   },
@@ -341,6 +345,10 @@ export const skills: SkillItem[] = [
     icon: "/icons/html-icon.png",
   },
   {
+    name: "Java",
+    icon: "/icons/java-icon.png",
+  },
+  {
     name: "JavaScript",
     icon: "/icons/javascript-icon.png",
   },
@@ -359,6 +367,10 @@ export const skills: SkillItem[] = [
   {
     name: "Node.js",
     icon: "/icons/nodejs-icon.png",
+  },
+  {
+    name: "Photoshop",
+    icon: "/icons/photoshop-icon.png",
   },
   {
     name: "React",
@@ -468,6 +480,9 @@ export const homePageContent: HomePageContent = {
           description: "Brief description of project 3.",
         },
       ],
+    },
+    skills: {
+      title: "My Skills",
     },
     contact: {
       title: "Let's Work Together",

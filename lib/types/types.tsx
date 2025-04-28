@@ -75,6 +75,9 @@ export interface HomePageContent {
       title: string
       projects: ProjectItem[]
     }
+    skills: {
+      title: string
+    }
     contact: {
       title: string
       description: string

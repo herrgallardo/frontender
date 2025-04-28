@@ -1,21 +1,18 @@
 "use client"
 
 import React from "react"
-import { skills } from "@/lib/data/data"
-
+import { skills, homePageContent } from "@/lib/data/data"
 import { motion } from "framer-motion"
 import Image from "next/image"
 
 const fadeInAnimationVariants = {
   initial: {
     opacity: 0,
-    x: 100,
-    y: 100,
+    y: 80,
   },
   animate: (index: number) => ({
     opacity: 1,
     y: 0,
-    x: 0,
     transition: {
       delay: 0.05 * index,
       duration: 0.75,
@@ -27,21 +24,20 @@ const Skills = () => {
   return (
     <section id="skills" className="w-full">
       <div className="mx-auto px-4 pb-24">
-        <h2 className="text-3xl font-semibold text-center mb-12 text-white text-shadow-md text-shadow-black">
-          My Skills
+        <h2 className="text-3xl font-semibold text-center mb-12 text-white text-shadow-md text-shadow-black/50">
+          {homePageContent.sections.skills.title}
         </h2>
-
         <div className="max-w-[53rem] mx-auto">
           <ul className="flex flex-wrap justify-center gap-4 text-lg text-white">
             {skills.map((skill, index) => (
               <motion.li
-                className="px-5 py-3 bg-bright-cyan/20 rounded-xl flex items-center shadow-sm shadow-black hover:scale-105 transition-all duration-300 hover:shadow-lg"
+                className="px-5 py-3 bg-bright-cyan/20 rounded-xl flex items-center shadow-xs shadow-black/50 hover:scale-105 transition-all duration-300 hover:shadow-lg"
                 key={index}
                 variants={fadeInAnimationVariants}
                 initial="initial"
                 whileInView="animate"
                 viewport={{
-                  once: false,
+                  once: true,
                 }}
                 custom={index}
               >

@@ -66,13 +66,17 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Skills Section */}
-        <Skills />
+        <section
+          id="skills"
+          className="py-16 bg-aqua-green/10 text-midnight-blue px-4"
+        >
+          <Skills />
+        </section>
 
         {/* Featured Projects Section */}
         <section
           id="projects"
-          className="py-16 bg-gradient-to-b from-midnight-blue to-deep-teal text-white px-4"
+          className="py-16 bg-gradient-to-b from-midnight-blue to-deep-teal text-white text-shadow-sm text-shadow-black/50 px-4"
         >
           <div className="container mx-auto">
             <h2 className="text-3xl font-semibold text-center mb-8">
