@@ -131,7 +131,7 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="w-full lg:w-1/2 flex justify-center"
             >
-              <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-bright-cyan shadow-lg shadow-black/30">
+              <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-bright-cyan shadow-sm shadow-black hover:scale-105 transition-all duration-300 hover:shadow-lg">
                 <Image
                   src={aboutPageContent.hero.profileImage}
                   alt={aboutPageContent.hero.profileImageAlt}
