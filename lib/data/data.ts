@@ -2,6 +2,7 @@ import {
   AboutPageContent,
   CompanyInfo,
   ContactInfo,
+  ContactPageContent,
   EducationItem,
   ExperienceItem,
   FooterSections,
@@ -595,5 +596,42 @@ export const aboutPageContent: AboutPageContent = {
         "Lundaloppet (15 Km.) (2025)",
       ],
     },
+  },
+}
+
+export const contactPageContent: ContactPageContent = {
+  hero: {
+    title: "Let's Connect",
+    description:
+      "Feel free to reach out with any questions, project ideas, or opportunities. I'd love to hear from you!",
+  },
+  form: {
+    title: "Send a Message",
+    namePlaceholder: "Your Name",
+    emailPlaceholder: "Your Email",
+    subjectPlaceholder: "Subject",
+    messagePlaceholder: "Your Message",
+    submitButtonText: "Send Message",
+    sendingText: "Sending...",
+    successMessage: "Thank you for your message! I'll get back to you soon.",
+    errorMessage: "Something went wrong. Please try again later.",
+  },
+  contactInfo: {
+    title: "Contact Information",
+  },
+  socialLinks: {
+    title: "Connect With Me",
+  },
+  availability: {
+    title: "Availability",
+    description:
+      "I'm currently available for full-time positions, contract work, and freelance projects. Feel free to reach out to discuss how I can help with your development needs.",
+  },
+  location: {
+    title: "Located in Lund, Sweden",
+    description: "Available for both remote work and on-site in Sweden",
+    subDescription: "Based in Lund, with easy access to Malmö and Copenhagen",
+    image: "/images/lund-map.jpg",
+    imageAlt: "Location Map",
   },
 }

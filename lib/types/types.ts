@@ -133,3 +133,38 @@ export interface AboutPageContent {
     }
   }
 }
+
+export interface ContactPageContent {
+  hero: {
+    title: string
+    description: string
+  }
+  form: {
+    title: string
+    namePlaceholder: string
+    emailPlaceholder: string
+    subjectPlaceholder: string
+    messagePlaceholder: string
+    submitButtonText: string
+    sendingText: string
+    successMessage: string
+    errorMessage: string
+  }
+  contactInfo: {
+    title: string
+  }
+  socialLinks: {
+    title: string
+  }
+  availability: {
+    title: string
+    description: string
+  }
+  location: {
+    title: string
+    description: string
+    subDescription: string
+    image: string
+    imageAlt: string
+  }
+}
