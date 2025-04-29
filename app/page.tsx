@@ -1,10 +1,11 @@
 "use client"
 
 import Skills from "@/components/skills"
-import Typewriter from "@/components/typewriter"
+
 import Link from "next/link"
 import Image from "next/image"
 import { homePageContent } from "@/lib/data/data"
+import HeroTypewriter from "@/components/hero-typewriter"
 
 export default function Home() {
   const { hero, buttons, sections } = homePageContent
@@ -23,7 +24,7 @@ export default function Home() {
               <div className="flex w-full mb-8 relative pr-6 sm:pr-12 md:pr-16 lg:pr-20 xl:pr-24 sm:pb-12">
                 {/* Typewriter Container */}
                 <div className="w-4/5 md:w-5/6">
-                  <Typewriter />
+                  <HeroTypewriter />
                 </div>
 
                 {/* Image Container */}
