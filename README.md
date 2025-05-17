@@ -12,9 +12,9 @@ A responsive personal portfolio website built with React, Next.js 15, TypeScript
 
 ## Live Demo
 
-The portfolio website is deployed and live on Vercel:
+The portfolio website is deployed and live:
 
-[https://new-frontender.vercel.app/](https://new-frontender.vercel.app/)
+[https://www.frontender.se)
 
 ## Features
 
