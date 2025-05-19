@@ -215,6 +215,15 @@ export const experience: ExperienceItem[] = [
 
 export const education: EducationItem[] = [
   {
+    title: "C# .NET Fullstack System Developer",
+    location: "Lexicon Malmö AB",
+    description:
+      "Pursuing an intensive program in .NET development with strong emphasis on C# object-oriented design programming. Gaining experience in frontend fundamentals and technologies (HTML, CSS, JavaScript, React) and backend frameworks (ASP.NET Web API, MVC). Building proficiency in database management through SQL, ADO.NET, LINQ, and Entity Framework Core. Applying Agile methodologies, SCRUM practices, and UML diagramming while using Git/GitHub for version control. Program structure combines hands-on mini-projects with collaborative teamwork, concluding with a comprehensive capstone project.",
+    icon: "",
+    date: "March 2025 - Present",
+    image: "/logos/lexicon-logo.png",
+  },
+  {
     title:
       "Full-stack developer with a focus on JavaScript (Fullstackutvecklare – inriktning JavaScript)",
     location: "Teknikhögskolan, Lund, Sweden",
