@@ -3,6 +3,7 @@ import {
   CompanyInfo,
   ContactInfo,
   ContactPageContent,
+  CVDownloadButtonContent,
   EducationItem,
   ExperienceItem,
   FooterSections,
@@ -49,7 +50,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/antonio-gallardo-girela/",
+    href: "https://www.linkedin.com/in/frontender/",
     icon: "linkedin",
   },
   {
@@ -679,4 +680,9 @@ export const contactPageContent: ContactPageContent = {
     image: "/images/lund-map.jpg",
     imageAlt: "Location Map",
   },
+}
+
+export const cvDownloadButtonContent: CVDownloadButtonContent = {
+  text: "Download CV",
+  href: "/documents/antonio-gallardo-girela-cv.pdf",
 }

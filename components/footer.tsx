@@ -9,6 +9,7 @@ import {
   contactInfo,
   companyInfo,
   footerSections,
+  cvDownloadButtonContent,
 } from "@/lib/data/data"
 import {
   FaGithub,
@@ -136,14 +137,14 @@ const Footer = () => {
 
               {/* CV Download Link */}
               <motion.a
-                href="/documents/antonio-gallardo-cv.pdf"
+                href={cvDownloadButtonContent.href}
                 download
                 className="text-bright-cyan hover:text-light-mint-green"
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <FaFileDownload size={20} />
-                <span className="sr-only">Download CV</span>
+                <span className="sr-only">{cvDownloadButtonContent.text}</span>
               </motion.a>
             </div>
           </motion.div>
@@ -166,12 +167,12 @@ const Footer = () => {
               ))}
               <motion.li whileHover={{ x: 5 }}>
                 <a
-                  href="/documents/antonio-gallardo-girela-cv.pdf"
+                  href={cvDownloadButtonContent.href}
                   download
                   className="text-aqua-green hover:text-light-mint-green transition-colors flex items-center"
                 >
                   <FaFileDownload className="mr-2" />
-                  Download CV
+                  {cvDownloadButtonContent.text}
                 </a>
               </motion.li>
             </ul>

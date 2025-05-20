@@ -172,3 +172,7 @@ export interface ContactPageContent {
     imageAlt: string
   }
 }
+export interface CVDownloadButtonContent {
+  text: string
+  href: string
+}

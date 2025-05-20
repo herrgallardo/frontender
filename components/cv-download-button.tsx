@@ -1,6 +1,7 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { FaFileDownload } from "react-icons/fa"
+import { cvDownloadButtonContent } from "@/lib/data/data"
 
 interface CVDownloadButtonProps {
   className?: string
@@ -12,7 +13,7 @@ interface CVDownloadButtonProps {
 
 const CVDownloadButton: React.FC<CVDownloadButtonProps> = ({
   className = "",
-  text = "Download CV",
+  text = cvDownloadButtonContent.text,
   variant = "primary",
   size = "md",
   iconPosition = "left",
@@ -47,7 +48,7 @@ const CVDownloadButton: React.FC<CVDownloadButtonProps> = ({
 
   return (
     <motion.a
-      href="/documents/antonio-gallardo-girela-cv.pdf"
+      href={cvDownloadButtonContent.href}
       download
       className={`${getVariantClasses()} ${getSizeClasses()} font-semibold rounded-lg shadow-sm shadow-black hover:scale-105 transition-all duration-300 hover:shadow-lg inline-flex items-center ${className}`}
       whileHover={{ scale: 1.05 }}
