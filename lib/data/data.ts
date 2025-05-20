@@ -329,6 +329,10 @@ export const languages: LanguageItem[] = [
 
 export const skills: SkillItem[] = [
   {
+    name: ".NET",
+    icon: "/icons/net-icon.png",
+  },
+  {
     name: "C#",
     icon: "/icons/c-sharp-icon.png",
   },
@@ -391,6 +395,14 @@ export const skills: SkillItem[] = [
   {
     name: "React",
     icon: "/icons/react-icon.png",
+  },
+  {
+    name: "SCRUM",
+    icon: "/icons/scrum-icon.png",
+  },
+  {
+    name: "SQL",
+    icon: "/icons/sql-icon.png",
   },
   {
     name: "TailwindCSS",
