@@ -536,7 +536,7 @@ export const homePageContent: HomePageContent = {
           },
         },
         {
-          title: "Portfolio",
+          title: "Portfolio (old version)",
           briefDescription:
             "Personal portfolio website showcasing my front-end development skills with React, TypeScript, and modern web technologies.",
           description:
@@ -553,8 +553,8 @@ export const homePageContent: HomePageContent = {
             "Vercel",
           ],
           links: {
-            demo: "https://frontender.se",
-            github: "https://github.com/herrgallardo/frontender",
+            demo: "https://old-frontender.vercel.app/",
+            github: "https://github.com/herrgallardo/my-personal-website",
           },
         },
       ],

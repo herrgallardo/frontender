@@ -1,11 +1,11 @@
 "use client"
 
 import Skills from "@/components/skills"
-
 import Link from "next/link"
 import Image from "next/image"
 import { homePageContent } from "@/lib/data/data"
 import HeroTypewriter from "@/components/hero-typewriter"
+import CVDownloadButton from "@/components/cv-download-button"
 
 export default function Home() {
   const { hero, buttons, sections } = homePageContent
@@ -61,6 +61,7 @@ export default function Home() {
                   >
                     {buttons.contactMe}
                   </Link>
+                  <CVDownloadButton variant="outline" iconPosition="right" />
                 </div>
               </div>
             </div>

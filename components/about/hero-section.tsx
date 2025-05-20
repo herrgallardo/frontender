@@ -1,9 +1,8 @@
-"use client"
-
 import React from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { AboutPageContent } from "@/lib/types/types"
+import CVDownloadButton from "@/components/cv-download-button"
 
 interface HeroSectionProps {
   content: AboutPageContent["hero"]
@@ -44,6 +43,20 @@ const HeroSection: React.FC<HeroSectionProps> = ({ content }) => {
                   {paragraph}
                 </p>
               ))}
+            </motion.div>
+
+            {/* CV Download Button */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="mt-8"
+            >
+              <CVDownloadButton
+                variant="primary"
+                text="Download CV"
+                iconPosition="left"
+              />
             </motion.div>
           </div>
           <motion.div

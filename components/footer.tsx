@@ -10,7 +10,12 @@ import {
   companyInfo,
   footerSections,
 } from "@/lib/data/data"
-import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa"
+import {
+  FaGithub,
+  FaLinkedin,
+  FaFacebook,
+  FaFileDownload,
+} from "react-icons/fa"
 import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md"
 
 const Footer = () => {
@@ -128,6 +133,18 @@ const Footer = () => {
                   <span className="sr-only">{social.label}</span>
                 </motion.a>
               ))}
+
+              {/* CV Download Link */}
+              <motion.a
+                href="/documents/antonio-gallardo-cv.pdf"
+                download
+                className="text-bright-cyan hover:text-light-mint-green"
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FaFileDownload size={20} />
+                <span className="sr-only">Download CV</span>
+              </motion.a>
             </div>
           </motion.div>
 
@@ -147,6 +164,16 @@ const Footer = () => {
                   </Link>
                 </motion.li>
               ))}
+              <motion.li whileHover={{ x: 5 }}>
+                <a
+                  href="/documents/antonio-gallardo-girela-cv.pdf"
+                  download
+                  className="text-aqua-green hover:text-light-mint-green transition-colors flex items-center"
+                >
+                  <FaFileDownload className="mr-2" />
+                  Download CV
+                </a>
+              </motion.li>
             </ul>
           </motion.div>
 
