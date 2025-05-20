@@ -30,14 +30,14 @@ const LanguagesSection: React.FC<LanguagesSectionProps> = ({
   }
 
   return (
-    <section className="py-16 bg-midnight-blue/50 px-6 md:px-10">
+    <section className="py-12 sm:py-14 md:py-16 bg-midnight-blue/50 px-4 sm:px-5 md:px-10">
       <div className="container mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-2xl font-semibold text-center mb-12 text-bright-cyan text-shadow-sm text-shadow-black/50"
+          className="text-xl sm:text-xl md:text-2xl font-semibold text-center mb-8 sm:mb-10 md:mb-12 text-bright-cyan text-shadow-sm text-shadow-black/50"
         >
           {sectionTitle}
         </motion.h2>
@@ -53,7 +53,7 @@ const LanguagesSection: React.FC<LanguagesSectionProps> = ({
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 max-w-5xl mx-auto"
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-5 md:gap-8 max-w-5xl mx-auto"
         >
           {languages.map((language, index) => (
             <motion.div
@@ -61,9 +61,9 @@ const LanguagesSection: React.FC<LanguagesSectionProps> = ({
               custom={index}
               variants={languageVariants}
               whileHover={{ scale: 1.05 }}
-              className="bg-midnight-blue/80 p-6 rounded-xl shadow-md flex flex-col items-center"
+              className="bg-midnight-blue/80 p-3 sm:p-4 md:p-6 rounded-xl shadow-md flex flex-col items-center"
             >
-              <div className="w-16 h-16 mb-4 relative">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 mb-2 sm:mb-3 md:mb-4 relative">
                 <Image
                   src={language.icon}
                   alt={language.name}
@@ -71,14 +71,14 @@ const LanguagesSection: React.FC<LanguagesSectionProps> = ({
                   className="object-contain"
                 />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-aqua-green text-shadow-xs text-shadow-black/40">
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-1 sm:mb-2 text-aqua-green text-shadow-xs text-shadow-black/40">
                 {language.name}
               </h3>
-              <div className="flex mt-2">
+              <div className="flex mt-1 sm:mt-2">
                 {[...Array(maxLevel)].map((_, i) => (
                   <svg
                     key={i}
-                    className={`w-5 h-5 ${
+                    className={`w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 ${
                       i < parseInt(language.level)
                         ? "text-bright-cyan"
                         : "text-gray-400"
