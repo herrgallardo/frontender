@@ -498,6 +498,27 @@ export const homePageContent: HomePageContent = {
         "Explore my portfolio of web applications and digital solutions. Each project showcases different skills and technologies in my development journey.",
       projects: [
         {
+          title: "Quizify Quiz App",
+          briefDescription:
+            "Interactive quiz application with customizable quizzes, real-time tracking, and competitive features.",
+          description:
+            "A comprehensive, interactive quiz application built as a group project using React 19, Firebase, and Open Trivia Database API. Features secure Firebase authentication, customizable quizzes across 20+ categories, real-time score tracking with visual progress indicators, global leaderboards, and a touch-friendly responsive interface with a glassmorphism design. The application includes thoughtful UI/UX elements, automatic session saving, and robust user management features.",
+          image: "/images/projects/quizify-project.png",
+          techStack: [
+            "React 19",
+            "Firebase",
+            "Firestore",
+            "React Router",
+            "Axios",
+            "Jest",
+            "React Testing Library",
+          ],
+          links: {
+            demo: "https://lexicon-react-quiz-app.vercel.app/quiz",
+            github: "https://github.com/herrgallardo/lexicon-react-quiz-app",
+          },
+        },
+        {
           title: "My CV",
           briefDescription:
             "Professional CV website with responsive design and interactive elements.",
