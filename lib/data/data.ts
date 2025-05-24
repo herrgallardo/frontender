@@ -499,28 +499,6 @@ export const homePageContent: HomePageContent = {
         "Explore my portfolio of web applications and digital solutions. Each project showcases different skills and technologies in my development journey.",
       projects: [
         {
-          title: "Northwind Database Explorer",
-          briefDescription:
-            "Modern, responsive application for exploring and managing the classic Northwind database.",
-          description:
-            "A comprehensive Next.js application that provides an interactive interface to the Northwind database, featuring a responsive design with smooth animations. The app allows users to browse, search, create, update, and delete products, as well as view categories, suppliers, and orders. Built with a modern tech stack including Next.js 15.3, React 19, and Tailwind CSS, with a sleek dark theme featuring teal and cyan accents. Backend functionality is handled through Next.js API routes connected to an Azure SQL Database, demonstrating both frontend and backend development skills.",
-          image: "/images/projects/northwind-project.png",
-          techStack: [
-            "Next.js 15.3",
-            "React 19",
-            "TypeScript",
-            "Tailwind CSS 4",
-            "SQL Server",
-            "Azure",
-            "Framer Motion",
-            "Vercel",
-          ],
-          links: {
-            demo: "https://sql-server-northwind.vercel.app/",
-            github: "https://github.com/herrgallardo/sql-server-northwind",
-          },
-        },
-        {
           title: "Quizify Quiz App",
           briefDescription:
             "Interactive quiz application with customizable quizzes, real-time tracking, and competitive features.",
