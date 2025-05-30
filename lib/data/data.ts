@@ -216,10 +216,10 @@ export const experience: ExperienceItem[] = [
 
 export const education: EducationItem[] = [
   {
-    title: "C# .NET Fullstack System Developer",
+    title: "Web and System Development with Al",
     location: "Lexicon Malmö AB",
     description:
-      "Pursuing an intensive program in .NET development with strong emphasis on C# object-oriented design programming. Gaining experience in frontend fundamentals and technologies (HTML, CSS, JavaScript, React) and backend frameworks (ASP.NET Web API, MVC). Building proficiency in database management through SQL, ADO.NET, LINQ, and Entity Framework Core. Applying Agile methodologies, SCRUM practices, and UML diagramming while using Git/GitHub for version control. Program structure combines hands-on mini-projects with collaborative teamwork, concluding with a comprehensive capstone project.",
+      "Pursuing an intensive program combining traditional full-stack development with modern Al integration. Building strong foundations in C# and .NET framework,including Entity Framework and LINQ, alongside SQL database management and Azure DevOps for Cl/CD. Developing frontend expertise with HTML, CSS, JavaScript,Typescript, React, and modern CSS frameworks(Tailwind, Bootstrap). The program uniquely integrates Al technologies throughAzure Al services, chatbot development, and data visualization with Python. Also gaining experience with Flask and Django frameworks. Applying Agile/Scrum methodologies throughout collaborative projects while developing skills in test-driven development and technical documentation.",
     icon: "",
     date: "March 2025 - Present",
     image: "/logos/lexicon-logo.png",
@@ -413,39 +413,6 @@ export const skills: SkillItem[] = [
     name: "TypeScript",
     icon: "/icons/typescript-icon.png",
   },
-]
-
-export const typewriterWords: string[] = [
-  "adaptable.",
-  "analytical.",
-  "creative.",
-  "curious.",
-  "dedicated.",
-  "diligent.",
-  "disciplined.",
-  "efficient.",
-  "empathetic.",
-  "flexible.",
-  "focused.",
-  "friendly.",
-  "hard-working.",
-  "helpful.",
-  "honest.",
-  "innovative.",
-  "motivated.",
-  "organized.",
-  "passionate.",
-  "patient.",
-  "punctual.",
-  "reliable.",
-  "responsible.",
-  "self-motivated.",
-  "sociable.",
-  "a team player.",
-  "thorough.",
-  "trustworthy.",
-  "versatile.",
-  "well-organized.",
 ]
 
 export const heroText =
